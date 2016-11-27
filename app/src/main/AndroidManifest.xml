@@ -24,7 +24,6 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".ProfileCompletion"></activity>
         <activity android:name=".PersonalityTest" />
         <activity
             android:name=".SignUp"

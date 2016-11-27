@@ -15,6 +15,8 @@ import com.enigma.mybucketlist.Fragments.ProfileFragment;
 import com.enigma.mybucketlist.Fragments.SearchFragment;
 import com.enigma.mybucketlist.Fragments.SubmitXPFragment;
 import com.enigma.mybucketlist.services.DataBaseAddClient;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.io.Serializable;
 
@@ -23,6 +25,7 @@ public class HomePage extends AppCompatActivity implements Serializable{
     private String[] array;
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
+    private FirebaseAuth mAuth;
 
 
     @Override
@@ -108,7 +111,8 @@ public class HomePage extends AppCompatActivity implements Serializable{
 
     }
     public void signOut(){
-
+        mAuth = FirebaseAuth.getInstance();
+        mAuth.signOut();
     }
 
 
