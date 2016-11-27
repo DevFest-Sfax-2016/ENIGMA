@@ -20,6 +20,7 @@
         <item>ESFP</item>
 
     </string-array>
+<<<<<<< HEAD
     <string-array name="menu">
         <item>Home</item>
         <item>profile</item>
@@ -27,5 +28,11 @@
         <item>search</item>
 
         <item>Log Out</item>
+=======
+    <string-array name="storyCategory">
+        <item>relationships</item>
+        <item>career</item>
+        <item>misfortune</item>
+>>>>>>> origin/storysubmit
     </string-array>
 </resources>
