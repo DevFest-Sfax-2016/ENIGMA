@@ -10,4 +10,54 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.enigma.mybucketlist.PersonalityTest">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:text="choose your personality type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewPersonalityType"
+            android:layout_marginBottom="10dp"
+            android:textSize="22dp"
+            android:textColor="#000000"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerChooseType"
+            android:entries="@array/personality"
+            android:background="@android:drawable/btn_dropdown"
+            android:layout_marginBottom="10dp"/>
+
+
+        <TextView
+            android:text="A personality test is a questionnaire or other standardized instrument designed to reveal aspects of an individual's character or psychological makeup. If you do not know your personality type go to this link and take the test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewExplanation"
+            android:layout_marginBottom="10dp"
+            android:textSize="22dp"
+
+            android:textColor="#000000"/>
+
+        <Button
+            android:text="Do the test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonTest" />
+
+        <Button
+            android:text="next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonNext" />
+
+    </LinearLayout>
 </RelativeLayout>
