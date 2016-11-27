@@ -54,13 +54,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      */
     private static final int REQUEST_READ_CONTACTS = 0;
 
-    /**
-     * A dummy authentication store containing known user names and passwords.
-     * TODO: remove after connecting to a real authentication system.
-     */
-    private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "foo@example.com:hello", "bar@example.com:world"
-    };
+
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
@@ -380,28 +374,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
     }
     public void SignUp(String email,String password){
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    public static final String TAG = "Sign up";
-
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
-
-                        // If sign in fails, display a message to the user. If sign in succeeds
-                        // the auth state listener will be notified and logic to handle the
-                        // signed in user can be handled in the listener.
-                        if (!task.isSuccessful()) {
-                            Log.e(TAG,"Sign up unsuccessful");
-                            showProgress(false);
-                        }else {
-                            showProgress(false);
-
-                        }
-
-                        // ...
-                    }
-                });
+    Intent signup = new Intent(this,SignUp.class);
+        startActivity(signup);
 
     }
     public void signIn(final String email, final String password){
