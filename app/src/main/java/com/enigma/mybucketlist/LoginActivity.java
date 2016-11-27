@@ -32,6 +32,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.enigma.mybucketlist.services.DataBaseAddClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -39,6 +40,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,7 +49,7 @@ import static android.Manifest.permission.READ_CONTACTS;
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
+public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor>,Serializable {
 
     /**
      * Id to identity READ_CONTACTS permission request.
@@ -69,12 +71,27 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
+    private FirebaseUser mFirebaseUser;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        mAuth = FirebaseAuth.getInstance();
+        mFirebaseUser = mAuth.getCurrentUser();
+
+        Log.e("Fuck","This");
         // Set up the login form.
+
+        if (mFirebaseUser != null) {
+            // Not signed in, launch the Sign In activity
+            startActivity(new Intent(this, HomePage.class));
+            finish();
+            return;
+        }
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
         mAuth = FirebaseAuth.getInstance();
@@ -395,8 +412,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                             Log.w(TAG, "signInWithEmail", task.getException());
                             SignUp(email,password);
                         }else {
+                            DataBaseAddClient add = new DataBaseAddClient();
                             showProgress(false);
-                        }
+                            }
 
                         // ...
                     }

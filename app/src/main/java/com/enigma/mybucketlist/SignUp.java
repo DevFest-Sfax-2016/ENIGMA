@@ -30,18 +30,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.enigma.mybucketlist.services.DataBaseAddClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
-public class SignUp extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
+public class SignUp extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor>,Serializable {
     private SignUp.UserLoginTask mAuthTask = null;
 
     // UI references.
@@ -375,6 +377,7 @@ public class SignUp extends AppCompatActivity implements LoaderManager.LoaderCal
                             Log.e(TAG,"Sign up unsuccessful");
                             showProgress(false);
                         }else {
+                            DataBaseAddClient add = new DataBaseAddClient();
                             Intent newAccounIntent = new Intent(getApplicationContext(),PersonalityTest.class);
                             startActivity(newAccounIntent);
                         }
