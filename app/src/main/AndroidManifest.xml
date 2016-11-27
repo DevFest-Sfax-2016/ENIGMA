@@ -32,10 +32,6 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".HomePage" />
 
-        <activity android:name=".SubmitStory">
-
-        </activity>
-
     </application>
 
 </manifest>
