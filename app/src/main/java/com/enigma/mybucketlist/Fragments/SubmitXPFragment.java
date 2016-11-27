@@ -1,6 +1,7 @@
 package com.enigma.mybucketlist.Fragments;
 
 
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -30,8 +31,9 @@ public class SubmitXPFragment extends Fragment {
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference myRef = database.getReference();
     private View mView;
-    public SubmitXPFragment() {
-        // Required empty public constructor
+
+    public SubmitXPFragment(){
+
     }
 
 
@@ -55,6 +57,9 @@ public class SubmitXPFragment extends Fragment {
 
                 newSubmission submition = new newSubmission(description,Title,TAG,anonym);
                 myRef.child("stories").child(id).setValue(submition);
+                Fragment newFragment = new FeedFragment();
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.main_fragment,newFragment).commit();
 
             }
         });

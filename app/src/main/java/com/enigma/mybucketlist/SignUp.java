@@ -376,6 +376,7 @@ public class SignUp extends AppCompatActivity implements LoaderManager.LoaderCal
                         if (!task.isSuccessful()) {
                             Log.e(TAG,"Sign up unsuccessful");
                             showProgress(false);
+
                         }else {
                             new DataBaseAddClient();
                             Intent newAccounIntent = new Intent(getApplicationContext(),PersonalityTest.class);
