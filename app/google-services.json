@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "181463353440",
+    "firebase_url": "https://mybucketlist-b60e7.firebaseio.com",
+    "project_id": "mybucketlist-b60e7",
+    "storage_bucket": "mybucketlist-b60e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:181463353440:android:9243eb0a1e246b7a",
+        "android_client_info": {
+          "package_name": "com.enigma.mybucketlist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "181463353440-c1tqtg4o4hadiftkdf4gqjn8dpqru5qc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.enigma.mybucketlist",
+            "certificate_hash": "A53BD6002C9F5D420553389D26D29B8CD4FF7FB6"
+          }
+        },
+        {
+          "client_id": "181463353440-e08pqosg7h2g38b1h2b2m0362tcm8t0s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoiwjJmvQqlsttGPE8U-d8dfAsu7Zw3AY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "181463353440-e08pqosg7h2g38b1h2b2m0362tcm8t0s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
