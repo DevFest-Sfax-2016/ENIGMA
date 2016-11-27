@@ -20,4 +20,9 @@
         <item>ESFP</item>
 
     </string-array>
+    <string-array name="storyCategory">
+        <item>relationships</item>
+        <item>career</item>
+        <item>misfortune</item>
+    </string-array>
 </resources>

@@ -86,12 +86,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         Log.e("Fuck","This");
         // Set up the login form.
 
-        if (mFirebaseUser != null) {
-            // Not signed in, launch the Sign In activity
-            startActivity(new Intent(this, HomePage.class));
-            finish();
-            return;
-        }
+//        if (mFirebaseUser != null) {
+//            // Not signed in, launch the Sign In activity
+//            startActivity(new Intent(this, HomePage.class));
+//            finish();
+//            return;
+//        }
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
         mAuth = FirebaseAuth.getInstance();
