@@ -20,4 +20,12 @@
         <item>ESFP</item>
 
     </string-array>
+    <string-array name="menu">
+        <item>Home</item>
+        <item>profile</item>
+        <item>Submit new experience</item>
+        <item>search</item>
+
+        <item>Log Out</item>
+    </string-array>
 </resources>
