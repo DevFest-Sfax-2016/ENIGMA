@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
-    <string-array name="genre">
-        <item>male</item>
 
-        <item>female</item>
-=======
     <string-array name="personality">
         <item>INTJ</item>
         <item>INTP</item>
@@ -23,6 +18,6 @@
         <item>ISFP</item>
         <item>ESTP</item>
         <item>ESFP</item>
->>>>>>> origin/PassPersonalityTest
+
     </string-array>
 </resources>

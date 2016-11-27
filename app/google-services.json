@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "181463353440-sv3dlrnucgdgc9d9e8duhfr2qq6ievnt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.enigma.mybucketlist",
+            "certificate_hash": "E97ABC0DC4242A400540CF49DE1AF91A600E0AB5"
+          }
+        },
+        {
           "client_id": "181463353440-c1tqtg4o4hadiftkdf4gqjn8dpqru5qc.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
