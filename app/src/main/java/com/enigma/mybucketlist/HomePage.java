@@ -2,6 +2,7 @@ package com.enigma.mybucketlist;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -113,6 +114,9 @@ public class HomePage extends AppCompatActivity implements Serializable{
     public void signOut(){
         mAuth = FirebaseAuth.getInstance();
         mAuth.signOut();
+        Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+        startActivity(intent);
+        finish();
     }
 
 

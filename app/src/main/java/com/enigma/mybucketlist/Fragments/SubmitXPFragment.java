@@ -1,6 +1,7 @@
 package com.enigma.mybucketlist.Fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.enigma.mybucketlist.Data.newSubmission;
+import com.enigma.mybucketlist.HomePage;
 import com.enigma.mybucketlist.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -53,6 +55,7 @@ public class SubmitXPFragment extends Fragment {
 
                 newSubmission submition = new newSubmission(description,Title,TAG,anonym);
                 myRef.child("stories").child(id).setValue(submition);
+
             }
         });
 

@@ -423,6 +423,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                         }else {
                             DataBaseAddClient add = new DataBaseAddClient();
                             showProgress(false);
+                            Intent intent = new Intent(getApplicationContext(),HomePage.class);
+                            startActivity(intent);
                             }
 
                         // ...
